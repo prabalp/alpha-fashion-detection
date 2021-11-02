@@ -34,15 +34,17 @@ const useStorage = (file) => {
         "vest dress",
         "sling dress",
       ];
+
       for (var i = 0; i < allTags.length; i++) {
         // console.log(allTags.length);
         var targetedTag = allTags[i];
         var presence = 0;
-        // eslint-disable-next-line no-loop-func
-        for (var j = 0; j < tag.length; j++) {
-          var tagName = tag[j];
-          if (tagName === targetedTag) {
-            presence = 1;
+        if (tag) {
+          for (var j = 0; j < tag.length; j++) {
+            var tagName = tag[j];
+            if (tagName === targetedTag) {
+              presence = 1;
+            }
           }
         }
         if (presence === 1) {
