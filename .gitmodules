@@ -1,0 +1,3 @@
+[submodule "fashionAPI"]
+	path = fashionAPI
+	url = https://github.com/prabalp/fashionAPI.git
