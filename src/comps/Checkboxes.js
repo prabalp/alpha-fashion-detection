@@ -58,6 +58,7 @@ function Checkboxes({ setSpecificImg, setValueO }) {
         for (var j = 0; j < val.length; j++) {
           // var tagName = val[j];
           // console.log("bhalues", val[j]);
+          // eslint-disable-next-line eqeqeq
           if (val[j] == i) {
             // console.log("reach");
             presence = 1;
