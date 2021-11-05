@@ -42,7 +42,12 @@ const ImageGrid = ({ setSelectedImg, specificImg, setCode }) => {
             setSelectedImg(doc.url);
             setCode(doc.tagsEncoded);
           }}
-          style={{ borderRadius: "10px" }}
+          style={{
+            borderRadius: "10px",
+            // minWidth: "300px",
+            // minHeight: "300px",
+            // maxHeight: "300px",
+          }}
         >
           <motion.img
             src={doc.url}
@@ -95,29 +100,20 @@ const ImageGrid = ({ setSelectedImg, specificImg, setCode }) => {
 
   console.log("inside image grid", specificImg);
   return (
-    <div className="img-grid">
+    <div
+      className="img-grid"
+      style={{
+        padding: "5px",
+        // display: "flex",
+        // flexWrap: "wrap",
+        // alignItems: "center",
+        // justifyContent: "space-around",
+      }}
+    >
       {docs &&
-        docs.map(
-          (doc) =>
-            // for search based rendering use conditional rendering
-            renderImage(doc)
-
-          // <motion.div
-          //   className="img-wrap"
-          //   key={doc.id}
-          //   layout
-          //   whileHover={{ opacity: 1 }}
-          //   s
-          //   onClick={() => setSelectedImg(doc.url)}
-          // >
-          //   <motion.img
-          //     src={doc.url}
-          //     alt="uploaded pic"
-          //     initial={{ opacity: 0 }}
-          //     animate={{ opacity: 1 }}
-          //     transition={{ delay: 1 }}
-          //   />
-          // </motion.div>
+        docs.map((doc) =>
+          // for search based rendering use conditional rendering
+          renderImage(doc)
         )}
     </div>
   );

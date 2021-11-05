@@ -4,12 +4,21 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import { FormHelperText } from "@material-ui/core";
 import FormLabel from "@material-ui/core/FormLabel";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import makeStyles from "@material-ui/styles/makeStyles";
 
 function Checkboxes({ setSpecificImg, setValueO }) {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState("Choose some tags");
+
+  const useStyles = makeStyles({
+    root: {
+      "&:hover": {
+        color: "#000",
+      },
+    },
+  });
 
   const handleRadioChange = (event) => {
     console.log("hahahaha", event.target.value);
@@ -48,9 +57,9 @@ function Checkboxes({ setSpecificImg, setValueO }) {
         console.log(val);
         for (var j = 0; j < val.length; j++) {
           // var tagName = val[j];
-          console.log("bhalues", val[j]);
+          // console.log("bhalues", val[j]);
           if (val[j] == i) {
-            console.log("reach");
+            // console.log("reach");
             presence = 1;
           }
         }
@@ -85,6 +94,7 @@ function Checkboxes({ setSpecificImg, setValueO }) {
     // }
   };
 
+  const classes = useStyles();
   return (
     <form onSubmit={handleSubmit}>
       <FormControl
@@ -108,6 +118,7 @@ function Checkboxes({ setSpecificImg, setValueO }) {
                 value={key}
                 control={<Radio />}
                 label={tag}
+                className={classes.root}
               />
             );
           })}

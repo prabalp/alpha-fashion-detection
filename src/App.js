@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import UploadForm from "./comps/UploadForm";
+// import UploadForm from "./comps/UploadForm";
 import ImageGrid from "./comps/ImageGrid";
 import Modal from "./comps/Modal";
 import Checkboxes from "./comps/Checkboxes";
