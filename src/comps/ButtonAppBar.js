@@ -24,13 +24,44 @@ function ButtonAppBar({ value, setValue }) {
               >
                 <MenuIcon />
               </IconButton> */}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Fashionhub
-          </Typography>
-          <Button color="inherit" onClick={handleClick}>
-            Tags
-          </Button>
-          <UploadForm />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexgrow: 1,
+              }}
+            >
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Fashionhub
+              </Typography>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <Button color="inherit" onClick={handleClick}>
+                Tags
+              </Button>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <UploadForm />
+                <span>Upload</span>
+              </div>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
     </Box>

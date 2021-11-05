@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import useStorage from "../hooks/useStorage";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import MyComponent from "react-fullpage-custom-loader";
 
 const ProgressBar = ({ file, setFile }) => {

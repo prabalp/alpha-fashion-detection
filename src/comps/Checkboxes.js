@@ -9,7 +9,7 @@ import React, { useState, useEffect } from "react";
 function Checkboxes({ setSpecificImg, setValueO }) {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState(false);
-  const [helperText, setHelperText] = React.useState("Choose wisely");
+  const [helperText, setHelperText] = React.useState("Choose some tags");
 
   const handleRadioChange = (event) => {
     console.log("hahahaha", event.target.value);
